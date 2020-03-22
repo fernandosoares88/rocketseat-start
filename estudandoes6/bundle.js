@@ -65,6 +65,21 @@ var TodoList = /*#__PURE__*/function (_List) {
   return TodoList;
 }(List);
 
+var Matematica = /*#__PURE__*/function () {
+  function Matematica() {
+    _classCallCheck(this, Matematica);
+  }
+
+  _createClass(Matematica, null, [{
+    key: "soma",
+    value: function soma(a, b) {
+      return a + b;
+    }
+  }]);
+
+  return Matematica;
+}();
+
 var minhaLista = new TodoList();
 
 document.getElementById('novotodo').onclick = function () {
@@ -72,3 +87,4 @@ document.getElementById('novotodo').onclick = function () {
 };
 
 minhaLista.mostraUsuario();
+console.log(Matematica.soma(2, 3));

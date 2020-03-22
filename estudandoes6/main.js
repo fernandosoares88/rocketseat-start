@@ -21,6 +21,12 @@ class TodoList extends List {
     }
 }
 
+class Matematica {
+    static soma (a, b){
+        return a + b
+    }
+}
+
 const minhaLista = new TodoList()
 
 document.getElementById('novotodo').onclick = function(){
@@ -28,3 +34,5 @@ document.getElementById('novotodo').onclick = function(){
 }
 
 minhaLista.mostraUsuario()
+
+console.log(Matematica.soma(2, 3))
