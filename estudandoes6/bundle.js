@@ -1,16 +1,29 @@
 "use strict";
 
-function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return a + b;
+var usuario = {
+  nome: 'Fernando',
+  idade: 25,
+  endereco: {
+    cidade: 'Natal',
+    estado: 'RN'
+  }
+};
+console.log(usuario); // const nome = usuario.nome
+// const idade = usuario.idade
+// const cidade = usuario.endereco.cidade
+// desestruturação
+
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+function mostraNome(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
 }
 
-var somaAF = function somaAF() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return a + b;
-};
-
-console.log(soma(1));
-console.log(somaAF());
+mostraNome(usuario);
